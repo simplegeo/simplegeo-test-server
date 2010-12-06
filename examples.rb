@@ -469,7 +469,7 @@ CONTEXT = <<-EOS
         },
         {
             "abbr": "",
-            "license": "(c) OpenStreetMap (http://openstreetmap.org/) and contributors CC-BY-SA (http://creativecommons.org/licenses/by-sa/2.0/)",
+            "attribution": "(c) OpenStreetMap (http://openstreetmap.org/) and contributors CC-BY-SA (http://creativecommons.org/licenses/by-sa/2.0/)",
             "bounds": [
                 -122.39115,
                 37.777233,
