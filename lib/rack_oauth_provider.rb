@@ -10,7 +10,11 @@ class RackOAuthProvider < Sinatra::Base
   before do
     halt 401 unless env['HTTP_AUTHORIZATION'] &&
         OAuth::Signature.verify(request) do |token, consumer_key|
-      [nil, "consumerSecret"] if consumer_key == "consumerKey"
+      if consumer_key == "consumerKey"
+        [nil, "consumerSecret"]
+      else
+        ["invalid", "invalid"]
+      end
     end
   end
 end
