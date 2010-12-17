@@ -32,6 +32,42 @@ BURGER_MASTER = <<-EOS
 }
 EOS
 
+MOUNTAIN_SUN = <<-EOS
+{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.275107,
+          40.018959
+        ]
+      },
+      "id": "SG_2RgyhpOhiTIVnpe3pN7y45_40.018959_-105.275107@1291798821",
+      "properties": {
+        "href": "http://api.simplegeo.com/1.0/features/SG_2RgyhpOhiTIVnpe3pN7y45_40.018959_-105.275107@1291798821.json",
+        "province": "CO",
+        "tags": [
+          "bar",
+          "brewery"
+        ],
+        "country": "US",
+        "owner": "simplegeo",
+        "city": "Boulder",
+        "name": "Mountain Sun Pub & Brewery",
+        "classifiers": [
+          {
+            "category": "Restaurant",
+            "subcategory": "",
+            "type": "Food & Drink"
+          }
+        ],
+        "phone": "+1 303 546 0886",
+        "postcode": "80302",
+        "address": "1535 Pearl St"
+      }
+    }
+EOS
+
 BURGERS = <<-EOS
 {
     "total": 7,

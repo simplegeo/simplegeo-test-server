@@ -18,17 +18,26 @@ get '/1.0/features/:id.json' do
 end
 
 get '/1.0/places/:lat,:lon.json' do
-  case params[:q]
-  when "zero"
-    <<-EOS
+  if params[:radius]
+      <<-EOS
+{
+    "total": 0,
+    "type": "FeatureCollection",
+    "features": [#{MOUNTAIN_SUN}]
+}
+    EOS
+  else
+    case params[:q]
+    when "zero"
+      <<-EOS
 {
     "total": 0,
     "type": "FeatureCollection",
     "features": []
 }
-    EOS
-  when "one"
-    <<-EOS
+      EOS
+    when "one"
+      <<-EOS
 {
     "total": 1,
     "type": "FeatureCollection",
@@ -36,9 +45,10 @@ get '/1.0/places/:lat,:lon.json' do
 #{BURGER_MASTER}
     ]
 }
-    EOS
-  else
-    BURGERS
+      EOS
+    else
+      BURGERS
+    end
   end
 end
 
