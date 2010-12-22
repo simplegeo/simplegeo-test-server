@@ -52,6 +52,20 @@ get '/1.0/places/:lat,:lon.json' do
   end
 end
 
+get '/1.0/places/address.json' do
+  if params[:address]
+      <<-EOS
+{
+    "total": 0,
+    "type": "FeatureCollection",
+    "features": [#{MOUNTAIN_SUN}]
+}
+    EOS
+  else
+    500
+  end
+end
+
 post '/1.0/features/:id.json' do
   # Update a record
   # Requires a partial (or full) GeoJSON object, any fields you set in it
