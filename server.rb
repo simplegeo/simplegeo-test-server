@@ -61,7 +61,11 @@ post '/1.0/features/:id.json' do
   input = JSON.parse(env['rack.input'].read)
 
   if env['CONTENT_TYPE'] == 'application/json' && input['properties']
-    [202, {'Content-Type' => 'application/json'}, '{"token": "79ea18ccfc2911dfa39058b035fcf1e5"}']
+    if input['properties']['private'] == "true"
+      [202, {'Content-Type' => 'application/json'}, '{"token": "3489de320e1911e0b72e58b035fcf1e5"}']
+    else
+      [202, {'Content-Type' => 'application/json'}, '{"token": "79ea18ccfc2911dfa39058b035fcf1e5"}']
+    end
   else
     500
   end
@@ -88,8 +92,13 @@ post '/1.0/places' do
   handle = "SG_#{hash}_#{coordinates[1]}_#{coordinates[0]}@#{Time.now.to_i}"
 
   if env['CONTENT_TYPE'] == 'application/json' && input['properties']
-    [202, {'Content-Type' => 'application/json'},
-     "{\"token\": \"596499b4fc2a11dfa39058b035fcf1e5\", \"id\": \"#{handle}\", \"uri\": \"/1.0/features/#{handle}.json\"}"]
+    if input['properties']['private'] == "true"
+      [202, {'Content-Type' => 'application/json'},
+       "{\"token\": \"0ff119100e1811e0b72e58b035fcf1e5\", \"id\": \"#{handle}\", \"uri\": \"/1.0/features/#{handle}.json\"}"]
+    else
+      [202, {'Content-Type' => 'application/json'},
+       "{\"token\": \"596499b4fc2a11dfa39058b035fcf1e5\", \"id\": \"#{handle}\", \"uri\": \"/1.0/features/#{handle}.json\"}"]
+    end
   else
     500
   end
