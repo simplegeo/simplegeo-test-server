@@ -95,7 +95,63 @@ post '/1.0/places' do
   end
 end
 
+get '/1.0/context/address.json' do
+  if params[:address]
+    <<-EOS
+{
+  "query": {
+    "latitude": 40.01753,
+    "longitude": -105.27741
+  },
+  #{CONTEXT_DEMOGRAPHICS},
+  #{CONTEXT_FEATURES},
+  #{CONTEXT_WEATHER}
+}
+    EOS
+  else
+    500
+  end
+end
+
+get '/1.0/context/ip.json' do
+  <<-EOS
+{
+  "query": {
+    "latitude": 37.778381,
+    "longitude": -122.389388
+  },
+  #{CONTEXT_DEMOGRAPHICS},
+  #{CONTEXT_FEATURES},
+  #{CONTEXT_WEATHER}
+}
+  EOS
+end
+
 get '/1.0/context/:lat,:lon.json' do
   # sample response for /1.0/context/37.803259,-122.440033.json
-  CONTEXT
+  <<-EOS
+{
+  "query": {
+    "latitude": 37.803259,
+    "longitude": -122.440033
+  },
+  #{CONTEXT_DEMOGRAPHICS},
+  #{CONTEXT_FEATURES},
+  #{CONTEXT_WEATHER}
+}
+  EOS
+end
+
+get '/1.0/context/:ip.json' do
+  <<-EOS
+{
+  "query": {
+    "latitude": 42.39020,
+    "longitude": -71.11470
+  },
+  #{CONTEXT_DEMOGRAPHICS},
+  #{CONTEXT_FEATURES},
+  #{CONTEXT_WEATHER}
+}
+  EOS
 end

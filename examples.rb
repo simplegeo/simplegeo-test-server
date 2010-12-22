@@ -347,11 +347,13 @@ CASTRO = <<-EOS
 }
 EOS
 
-CONTEXT = <<-EOS
-{
+CONTEXT_DEMOGRAPHICS = <<-EOS
     "demographics": {
         "metro_score": "9"
-    },
+    }
+EOS
+
+CONTEXT_FEATURES = <<-EOS
     "features": [
         {
             "abbr": "",
@@ -519,10 +521,20 @@ CONTEXT = <<-EOS
             "subcategory": "Stadium",
             "type": "Entertainment"
         }
-    ],
+    ]
+EOS
+
+CONTEXT_WEATHER = <<-EOS
     "weather": {
         "conditions": "light haze",
         "temperature": "65F"
     }
+EOS
+
+CONTEXT = <<-EOS
+{
+#{CONTEXT_DEMOGRAPHICS},
+#{CONTEXT_FEATURES},
+#{CONTEXT_WEATHER}
 }
 EOS
