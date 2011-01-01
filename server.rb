@@ -36,7 +36,7 @@ get '/1.0/places/:lat,:lon.json' do
     "features": []
 }
       EOS
-    when "one"
+    when "one", "öne"
       <<-EOS
 {
     "total": 1,
