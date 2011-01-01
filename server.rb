@@ -12,6 +12,12 @@ get '/1.0/features/:id.json' do
     BURGER_MASTER
   when /^SG_0Bw22I6fWoxnZ4GDc8YlXd/
     CASTRO
+  when /^SG_3tLT0I5cOUWIpoVOBeScOx/
+    if params[:zoom] == "0"
+      LOS_ANGELES
+    else
+      404
+    end
   else
     404
   end
