@@ -20,12 +20,12 @@ BURGER_MASTER = <<-EOS
         "state": "WA",
         "address": "2820 Harrison Ave NW",
         "owner": "simplegeo",
-        "categories": [
-            [
-                "Food & Drink",
-                "Restaurants",
-                ""
-            ]
+        "classifiers": [
+            {
+                "type": "Food & Drink",
+                "category": "Restaurant",
+                "subcategory": ""
+            }
         ],
         "postcode": "98502"
     }
@@ -94,12 +94,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "2820 Harrison Ave NW",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98502"
             }
@@ -126,12 +126,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "600 Cooper Pt Rd NW",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98502"
             }
@@ -157,12 +157,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "5252 Capitol Blvd S",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98501"
             }
@@ -189,12 +189,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "3959 Martin Way E",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98506"
             }
@@ -220,12 +220,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "4830 Yelm Hwy SE",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98503"
             }
@@ -251,12 +251,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "7210 Martin Way E",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98516"
             }
@@ -282,12 +282,12 @@ BURGERS = <<-EOS
                 "state": "WA",
                 "address": "1609 Marvin Rd NE",
                 "owner": "simplegeo",
-                "categories": [
-                    [
-                        "Food & Drink",
-                        "Restaurants",
-                        ""
-                    ]
+                "classifiers": [
+                    {
+                        "type": "Food & Drink",
+                        "category": "Restaurant",
+                        "subcategory": ""
+                    }
                 ],
                 "postcode": "98516"
             }
@@ -337,11 +337,15 @@ CASTRO = <<-EOS
     },
     "properties": {
         "abbr": "",
-        "category": "Neighborhood",
         "license": "http://creativecommons.org/publicdomain/mark/1.0/",
         "name": "Castro District",
-        "subcategory": "",
-        "type": "Boundary"
+        "classifiers": [
+            {
+                "type": "Boundary",
+                "category": "Neighborhood",
+                "subcategory": ""
+            }
+        ]
     },
     "type": "Feature"
 }
@@ -388,11 +392,15 @@ LOS_ANGELES = <<-EOS
     },
     "properties": {
         "abbr": "",
-        "category": "Time Zone",
         "license": "http://creativecommons.org/publicdomain/zero/1.0/",
         "name": "America/Los_Angeles @ Zoom 0",
-        "subcategory": "",
-        "type": "Region"
+        "classifiers": [
+            {
+                "type": "Region",
+                "category": "Time Zone",
+                "subcategory": ""
+            }
+        ]
     },
     "type": "Feature"
 }
@@ -415,11 +423,15 @@ CONTEXT_FEATURES = <<-EOS
                 179.78115,
                 71.412180
             ],
-            "category": "National",
             "id": "SG_3uwSAEdXVBzK1ZER9Nqkdp_45.687160_-112.493107",
             "name": "United States of America",
-            "subcategory": "",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "National",
+                    "subcategory": ""
+                }
+            ]
         },
         {
             "abbr": "CA",
@@ -430,11 +442,15 @@ CONTEXT_FEATURES = <<-EOS
                 -114.131210,
                 42.009517
             ],
-            "category": "Subnational",
             "id": "SG_2MySaPILVQG3MoXrsVehyR_37.215297_-119.663837",
             "name": "California",
-            "subcategory": "State",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Subnational",
+                    "subcategory": "State"
+                }
+            ]
         },
         {
             "abbr": "",
@@ -445,11 +461,15 @@ CONTEXT_FEATURES = <<-EOS
                 -114.039345,
                 49.002892
             ],
-            "category": "Time Zone",
             "id": "SG_3tLT0I5cOUWIpoVOBeScOx_41.316130_-119.116571",
             "name": "America/Los_Angeles",
-            "subcategory": "",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Time Zone",
+                    "subcategory": ""
+                }
+            ]
         },
         {
             "abbr": "",
@@ -460,11 +480,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.28178,
                 37.929824
             ],
-            "category": "Administrative",
             "id": "SG_7TAYWdlPlAIzUDT7MVwxmZ_37.759717_-122.693971",
             "name": "San Francisco",
-            "subcategory": "County",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Administrative",
+                    "subcategory": "County"
+                }
+            ]
         },
         {
             "abbr": "",
@@ -475,11 +499,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.28178,
                 37.929824
             ],
-            "category": "Municipal",
             "id": "SG_1mNfKHr5aXH7LWgmZL8Uq7_37.759717_-122.693971",
             "name": "San Francisco",
-            "subcategory": "City",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Municipal",
+                    "subcategory": "City"
+                }
+            ]
         },
         {
             "abbr": "",
@@ -490,11 +518,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.28178,
                 37.929824
             ],
-            "category": "School District",
             "id": "SG_4wyrIh6TQId1MiL2cfYa5d_37.759717_-122.693971",
             "name": "San Francisco Unified School District",
-            "subcategory": "Unified",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "School District",
+                    "subcategory": "Unified"
+                }
+            ]
         },
         {
             "abbr": "",
@@ -505,11 +537,15 @@ CONTEXT_FEATURES = <<-EOS
                 -121.733333,
                 38.041666
             ],
-            "category": "Urban Area",
             "id": "SG_4n4ze6xOdAFr0gp1WboZrN_37.551206_-122.127401",
-            "name": "San Francisco1",
-            "subcategory": "",
-            "type": "Boundary"
+            "name": "San Francisco",
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Urban Area",
+                    "subcategory": ""
+                }
+            ]
         },
         {
             "abbr": "",
@@ -520,11 +556,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.379681,
                 37.783529
             ],
-            "category": "US Census",
             "id": "SG_3JxiYHuWo7N9KDYeDSijzl_37.772749_-122.390793",
             "name": "06075060700",
-            "subcategory": "Tract",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "US Census",
+                    "subcategory": "Tract"
+                }
+            ]
         },
         {
             "abbr": "",
@@ -535,11 +575,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.379202,
                 37.789791
             ],
-            "category": "Postal Code",
             "id": "SG_4iNdS13pIvPoUBWBnq0U2f_37.766945_-122.393570",
             "name": "94107",
-            "subcategory": "",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Postal Code",
+                    "subcategory": ""
+                }
+            ]
         },
         {
             "abbr": "",
@@ -550,11 +594,15 @@ CONTEXT_FEATURES = <<-EOS
                 -122.384281,
                 37.796503
             ],
-            "category": "Neighborhood",
             "id": "SG_6Bv7Cw61hmZjfZ8McTGGM2_37.785379_-122.390793",
             "name": "South Beach",
-            "subcategory": "",
-            "type": "Boundary"
+            "classifiers": [
+                {
+                    "type": "Boundary",
+                    "category": "Neighborhood",
+                    "subcategory": ""
+                }
+            ]
         },
         {
             "abbr": "",
@@ -565,12 +613,16 @@ CONTEXT_FEATURES = <<-EOS
                 -122.387775,
                 37.779730
             ],
-            "category": "Arena",
             "id": "SG_4H2GqJDZrc0ZAjKGR8qM4D_37.778406_-122.389506",
             "license": "http://creativecommons.org/licenses/by-sa/2.0/",
             "name": "AT&T Park",
-            "subcategory": "Stadium",
-            "type": "Entertainment"
+            "classifiers": [
+                {
+                    "type": "Entertainment",
+                    "category": "Arena",
+                    "subcategory": "Stadium"
+                }
+            ]
         }
     ]
 EOS
