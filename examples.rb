@@ -24,7 +24,7 @@ BURGER_MASTER = <<-EOS
             {
                 "type": "Food & Drink",
                 "category": "Restaurant",
-                "subcategory": ""
+                "subcategory": null
             }
         ],
         "postcode": "98502"
@@ -57,7 +57,7 @@ MOUNTAIN_SUN = <<-EOS
         "classifiers": [
           {
             "category": "Restaurant",
-            "subcategory": "",
+            "subcategory": null,
             "type": "Food & Drink"
           }
         ],
@@ -98,7 +98,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98502"
@@ -130,7 +130,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98502"
@@ -161,7 +161,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98501"
@@ -193,7 +193,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98506"
@@ -224,7 +224,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98503"
@@ -255,7 +255,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98516"
@@ -286,7 +286,7 @@ BURGERS = <<-EOS
                     {
                         "type": "Food & Drink",
                         "category": "Restaurant",
-                        "subcategory": ""
+                        "subcategory": null
                     }
                 ],
                 "postcode": "98516"
@@ -336,14 +336,14 @@ CASTRO = <<-EOS
         "type": "Polygon"
     },
     "properties": {
-        "abbr": "",
+        "abbr": null,
         "license": "http://creativecommons.org/publicdomain/mark/1.0/",
         "name": "Castro District",
         "classifiers": [
             {
                 "type": "Boundary",
                 "category": "Neighborhood",
-                "subcategory": ""
+                "subcategory": null
             }
         ]
     },
@@ -391,14 +391,14 @@ LOS_ANGELES = <<-EOS
         "type": "Polygon"
     },
     "properties": {
-        "abbr": "",
+        "abbr": null,
         "license": "http://creativecommons.org/publicdomain/zero/1.0/",
         "name": "America/Los_Angeles @ Zoom 0",
         "classifiers": [
             {
                 "type": "Region",
                 "category": "Time Zone",
-                "subcategory": ""
+                "subcategory": null
             }
         ]
     },
@@ -415,7 +415,7 @@ EOS
 CONTEXT_FEATURES = <<-EOS
     "features": [
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -179.142471,
@@ -429,7 +429,7 @@ CONTEXT_FEATURES = <<-EOS
                 {
                     "type": "Boundary",
                     "category": "National",
-                    "subcategory": ""
+                    "subcategory": null
                 }
             ]
         },
@@ -453,7 +453,7 @@ CONTEXT_FEATURES = <<-EOS
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/zero/1.0/",
             "bounds": [
                 -124.733253,
@@ -467,12 +467,12 @@ CONTEXT_FEATURES = <<-EOS
                 {
                     "type": "Boundary",
                     "category": "Time Zone",
-                    "subcategory": ""
+                    "subcategory": null
                 }
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -123.173824,
@@ -491,7 +491,7 @@ CONTEXT_FEATURES = <<-EOS
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -123.173824,
@@ -510,7 +510,7 @@ CONTEXT_FEATURES = <<-EOS
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -123.173824,
@@ -529,7 +529,7 @@ CONTEXT_FEATURES = <<-EOS
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -122.516667,
@@ -543,12 +543,12 @@ CONTEXT_FEATURES = <<-EOS
                 {
                     "type": "Boundary",
                     "category": "Urban Area",
-                    "subcategory": ""
+                    "subcategory": null
                 }
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -122.40499,
@@ -567,7 +567,7 @@ CONTEXT_FEATURES = <<-EOS
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/mark/1.0/",
             "bounds": [
                 -122.406493,
@@ -581,12 +581,12 @@ CONTEXT_FEATURES = <<-EOS
                 {
                     "type": "Boundary",
                     "category": "Postal Code",
-                    "subcategory": ""
+                    "subcategory": null
                 }
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "license": "http://creativecommons.org/publicdomain/zero/1.0/",
             "bounds": [
                 -122.398281,
@@ -600,12 +600,12 @@ CONTEXT_FEATURES = <<-EOS
                 {
                     "type": "Boundary",
                     "category": "Neighborhood",
-                    "subcategory": ""
+                    "subcategory": null
                 }
             ]
         },
         {
-            "abbr": "",
+            "abbr": null,
             "attribution": "(c) OpenStreetMap (http://openstreetmap.org/) and contributors CC-BY-SA (http://creativecommons.org/licenses/by-sa/2.0/)",
             "bounds": [
                 -122.39115,
