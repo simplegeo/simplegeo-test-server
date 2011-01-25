@@ -642,7 +642,7 @@ CONTEXT = <<-EOS
 }
 EOS
 
-CATEGORIES = <<-EOS	
+CATEGORIES = <<-EOS
 [
    {
       "category":"Administrative",
