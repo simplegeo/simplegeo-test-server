@@ -6,6 +6,10 @@ require File.dirname(__FILE__) + '/lib/rack_oauth_provider'
 
 use RackOAuthProvider
 
+get '/1.0/features/categories.json' do
+  CATEGORIES
+end
+
 get '/1.0/features/:id.json' do
   case params[:id]
   when /^SG_4CsrE4oNy1gl8hCLdwu0F0/

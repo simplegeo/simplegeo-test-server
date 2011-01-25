@@ -641,3 +641,32 @@ CONTEXT = <<-EOS
 #{CONTEXT_WEATHER}
 }
 EOS
+
+CATEGORIES = <<-EOS	
+[
+   {
+      "category":"Administrative",
+      "category_id":"10100100",
+      "type":"Region",
+      "subcategory":"Consolidated City"
+   },
+   {
+      "category":"Administrative",
+      "category_id":"10100101",
+      "type":"Region",
+      "subcategory":"County"
+   },
+   {
+      "category":"Administrative",
+      "category_id":"10100102",
+      "type":"Region",
+      "subcategory":"Parish"
+   },
+   {
+      "category":"Commercial Area",
+      "category_id":"10101100",
+      "type":"Region",
+      "subcategory":"Business District"
+   }
+]
+EOS
