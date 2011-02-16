@@ -670,3 +670,109 @@ CATEGORIES = <<-EOS
    }
 ]
 EOS
+
+STORAGE_BOULDER = <<-EOS
+{
+    "created": 1281032310,
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -105.27728,
+            40.01685
+        ]
+    },
+    "id": "simplegeo-boulder",
+    "layerLink": {
+        "href": "http://api.simplegeo.com/0.1/layer/mojodna.test.json"
+    },
+    "type": "Feature",
+    "properties": {
+        "layer": "mojodna.test",
+        "type": "object",
+        "key": "value"
+    },
+    "selfLink": {
+        "href": "http://api.simplegeo.com/0.1/records/mojodna.test/simplegeo-boulder.json"
+    }
+}
+EOS
+
+STORAGE_HISTORY = <<-EOS
+{
+    "type":"GeometryCollection",
+    "geometries":[
+        {
+            "type":"Point",
+            "coordinates":[
+                -122.422917,
+                37.761835
+            ],
+            "created":1213397406
+        },
+        {
+            "type":"Point",
+            "coordinates":[
+                -122.422832,
+                37.761809
+            ],
+            "created":1213396201
+        }
+    ]
+}
+EOS
+
+STORAGE_QUERY = <<-EOS
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "distance": 5.559743714290299,
+            "created": 1281030506,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.27728,
+                    40.01685
+                ]
+            },
+            "id": "boulder",
+            "layerLink": {
+                "href": "http://api.simplegeo.com/0.1/layer/mojodna.test.json"
+            },
+            "type": "Feature",
+            "properties": {
+                "layer": "mojodna.test",
+                "type": "object",
+                "key": "value"
+            },
+            "selfLink": {
+                "href": "http://api.simplegeo.com/0.1/records/mojodna.test/boulder.json"
+            }
+        },
+        {
+            "distance": 5.559743714290299,
+            "created": 1281032310,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.27728,
+                    40.01685
+                ]
+            },
+            "id": "simplegeo-boulder",
+            "layerLink": {
+                "href": "http://api.simplegeo.com/0.1/layer/mojodna.test.json"
+            },
+            "type": "Feature",
+            "properties": {
+                "layer": "mojodna.test",
+                "type": "object",
+                "key": "value"
+            },
+            "selfLink": {
+                "href": "http://api.simplegeo.com/0.1/records/mojodna.test/simplegeo-boulder.json"
+            }
+        }
+    ]
+}
+EOS

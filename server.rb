@@ -188,3 +188,63 @@ get '/1.0/context/:ip.json' do
 }
   EOS
 end
+
+# create / update a record
+put '/0.1/records/:layer/:id.json' do
+  input = JSON.parse(env['rack.input'].read)
+
+  if input['type'] && input['geometry'] && input['properties']
+    202
+  else
+    [400, {'Content-type' => 'application/json'}, "{\"message\": \"Couldn't decode JSON object.\", \"code\": 400}"]
+  end
+end
+
+# get a record
+get '/0.1/records/:layer/:id.json' do
+  STORAGE_BOULDER
+end
+
+# delete a record
+delete '/0.1/records/:layer/:id.json' do
+  if params[:id] == "nonexistent"
+    [404, {'Content-type' => 'application/json'}, "{\"message\": \"No such record.\", \"code\": 404}"]
+  else
+    202
+  end
+end
+
+# create / update multiple records
+post '/0.1/records/:layer.json' do
+  input = JSON.parse(env['rack.input'].read)
+
+  if input['type'] == 'FeatureCollection'
+    # TODO each record must contain an id field
+    202
+  else
+    400
+  end
+end
+
+# find nearby records
+get '/0.1/records/:layer/nearby/:lat,:lon.json' do
+  # TODO add sentinel values for different types of queries
+  STORAGE_QUERY
+end
+
+# find records near an IP
+get '/0.1/records/:layer/nearby/:ip.json' do
+  # TODO return a sentinel value to distinguish this from point queries
+  STORAGE_QUERY
+end
+
+# find records near an address
+get '/0.1/records/:layer/nearby/address.json' do
+  # TODO return a sentinel value to distinguish this from point queries
+  STORAGE_QUERY
+end
+
+# get record history
+get '/0.1/records/:layer/:id/history.json' do
+  STORAGE_HISTORY
+end
