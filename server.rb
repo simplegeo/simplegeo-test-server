@@ -100,7 +100,11 @@ delete '/1.0/features/:id.json' do
   # Requires a single SimpleGeo ID
   # Returns a status polling token
 
-  [202, {'Content-Type' => 'application/json'}, '{"token": "8fa0d1c4fc2911dfa39058b035fcf1e5"}']
+  if params[:id] == 'SG_garbage'
+    [404, {'Content-type' => 'application/json'}, "{\"message\": \"Not Found\", \"code\": 404}"]
+  else
+    [202, {'Content-Type' => 'application/json'}, '{"token": "8fa0d1c4fc2911dfa39058b035fcf1e5"}']
+  end
 end
 
 post '/1.0/places' do
@@ -116,7 +120,9 @@ post '/1.0/places' do
   handle = "SG_#{hash}_#{coordinates[1]}_#{coordinates[0]}@#{Time.now.to_i}"
 
   if env['CONTENT_TYPE'] == 'application/json' && input['properties']
-    if input['properties']['private'] == "true"
+    if input['properties']['city'] == "Gildford"
+        500
+    elsif input['properties']['private'] == "true"
       [202, {'Content-Type' => 'application/json'},
        "{\"token\": \"0ff119100e1811e0b72e58b035fcf1e5\", \"id\": \"#{handle}\", \"uri\": \"/1.0/features/#{handle}.json\"}"]
     else
