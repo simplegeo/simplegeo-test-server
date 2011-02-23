@@ -210,7 +210,7 @@ delete '/0.1/records/:layer/:id.json' do
   if params[:id] == "nonexistent"
     [404, {'Content-type' => 'application/json'}, "{\"message\": \"No such record.\", \"code\": 404}"]
   else
-    202
+    [202, {'Content-Type' => 'application/json'}, '{"status": "deleted"}']
   end
 end
 
