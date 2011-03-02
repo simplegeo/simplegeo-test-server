@@ -781,11 +781,11 @@ GET_LAYER = <<-EOS
 {
     "name": "mojodna.test",
     "title": "Mojodna Test Layer",
-    "description": "This is a test layer for Mojodna".
+    "description": "This is a test layer for Mojodna",
     "public": false,
-    "callback_urls": ["http://example.com/callback/simplegeo", "http://example.com/callback/simplegeo/new"]
+    "callback_urls": ["http://example.com/callback/simplegeo", "http://example.com/callback/simplegeo/new"],
     "created": 1298670526,
-    "updated": 1298670526,
+    "updated": 1298670526
 }
 EOS
 
@@ -795,20 +795,20 @@ GET_LAYERS = <<-EOS
         {
             "name": "mojodna.test",
             "title": "Mojodna Test Layer",
-            "description": "This is a test layer for Mojodna".
+            "description": "This is a test layer for Mojodna",
             "public": false,
-            "callback_urls": ["http://example.com/callback/simplegeo", "http://example.com/callback/simplegeo/new"]
+            "callback_urls": ["http://example.com/callback/simplegeo", "http://example.com/callback/simplegeo/new"],
             "created": 1298670526,
-            "updated": 1298670526,
+            "updated": 1298670526
         },
         {
             "name": "mojodna.test.2",
             "title": "Mojodna Test Layer 2",
-            "description": "This is another test layer for Mojodna".
+            "description": "This is another test layer for Mojodna",
             "public": false,
-            "callback_urls": ["http://example.com/callback/simplegeo/old", "http://example.com/callback/simplegeo/older"]
+            "callback_urls": ["http://example.com/callback/simplegeo/old", "http://example.com/callback/simplegeo/older"],
             "created": 1298670526,
-            "updated": 1298670526,
+            "updated": 1298670526
         }
     ]
 }
