@@ -254,3 +254,23 @@ end
 get '/0.1/records/:layer/:id/history.json' do
   STORAGE_HISTORY
 end
+
+# get layers
+get '/0.1/layers.json' do
+  GET_LAYERS
+end
+
+# get layer
+get '/0.1/layers/:layer.json' do
+  GET_LAYER
+end
+
+# create/update layer
+put '/0.1/layers/:layer.json' do
+  CREATE_LAYER
+end
+
+# delete layer
+delete '/0.1/layers/:layer.json' do
+  DELETE_LAYER
+end
