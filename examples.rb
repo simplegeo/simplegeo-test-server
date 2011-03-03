@@ -816,12 +816,12 @@ EOS
 
 CREATE_LAYER = <<-EOS
 {
-    "status": "ok"
+    "status": "OK"
 }
 EOS
 
 DELETE_LAYER = <<-EOS
 {
-    "status": "deleted"
+    "status": "Deleted"
 }
 EOS
